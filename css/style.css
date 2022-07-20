@@ -10,24 +10,30 @@ header img {
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 main form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 }
 main form .choix {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  width: 255px;
   margin: 20px;
 }
-main form .choix .choix-top, main form .choix .choix-bottom {
-  width: 300px;
-}
-main form .choix .choix-top input, main form .choix .choix-bottom input {
+main form .choix input {
   margin: 0;
+}
+main form .choix input[type=checkbox] {
+  background-color: red;
+}
+main form .choix .choix-top input:hover, main form .choix .choix-top label:hover {
+  cursor: pointer;
 }
 main form button {
   width: 40%;
@@ -39,6 +45,10 @@ main form button:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: 0.2s ease-in-out;
+}
+main .mdp {
+  text-align: center;
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

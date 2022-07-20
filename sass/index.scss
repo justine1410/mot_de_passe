@@ -11,21 +11,27 @@ header{
 
 main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     form{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 30px;
         .choix{
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+            width: 255px;
             margin: 20px;
-            .choix-top,.choix-bottom{
-                width: 300px;
-                input{
-                    margin: 0;
-                }
+            input{
+                margin: 0;
+            }
+            input[type="checkbox"]{
+                background-color: red;
+            }
+            .choix-top input:hover, .choix-top label:hover{
+                cursor: pointer;
             }
         }
         button{
@@ -39,6 +45,11 @@ main{
                 transition: 0.2s ease-in-out;
             }
         }
+    }
+
+    .mdp{
+        text-align: center;
+        font-size: 30px;
     }
     
 }

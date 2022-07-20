@@ -129,12 +129,23 @@ button.addEventListener('click',(e)=>{
 
 
     if(chiffre.checked== true){
-        function nombreAleatoire(min,max){
-            return Math.floor(Math.random()*(max - min +1)) + min;
+        const characters = '1234567890';
+
+        function nombreAleatoire(length){
+        //     return Math.floor(Math.random()*(max - min +1)) + min;
+        // }
+        // nombre = nombreAleatoire(nombreChiffre,1,10);
+        let result = ' ';
+        const charactersLength = characters.length;
+        for ( let i = 0; i < length; i++ ) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
-        nombre = nombreAleatoire(nombreChiffre,10);
-        console.log(nombreChiffre);
-    }else{
+
+        return result;
+    }
+    nombre = nombreAleatoire(nombreChiffre)
+    console.log(nombre);
+}else{
         console.log('pas de chiffres');
     }
 
@@ -194,7 +205,7 @@ button.addEventListener('click',(e)=>{
     
     let mdp= document.querySelector('.mdp')
 
-    mdp.innerHTML=mdp.innerHTML+`${nombre+minuscules+majuscules+speciauxCaractere}`
+    mdp.innerHTML=mdp.innerHTML+`<p>${nombre+minuscules+majuscules+speciauxCaractere}</p>`
 })
 
 
