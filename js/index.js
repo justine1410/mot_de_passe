@@ -120,7 +120,7 @@ button.addEventListener('click',(e)=>{
     let nombre = " ";
     let minuscules = " ";
     let majuscules = " ";
-    let speciaux = " ";
+    let speciauxCaractere = " ";
 
     if(chiffre.checked== true){
         function nombreAleatoire(min,max){
@@ -180,14 +180,14 @@ button.addEventListener('click',(e)=>{
             return result;
         }
 
-        let speciaux = speciauxAleatoire(1)
+        speciauxCaractere = speciauxAleatoire(1)
     }else{
         console.log('Pas de speciaux');
     }
     
     let mdp= document.querySelector('.mdp')
 
-    mdp.innerHTML=mdp.innerHTML+`${nombre+minuscules+majuscules+speciaux}`
+    mdp.innerHTML=mdp.innerHTML+`${nombre+minuscules+majuscules+speciauxCaractere}`
 })
 
 
