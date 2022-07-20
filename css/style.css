@@ -8,4 +8,37 @@ header img {
   width: 10%;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main form .choix {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+main form .choix .choix-top, main form .choix .choix-bottom {
+  width: 300px;
+}
+main form .choix .choix-top input, main form .choix .choix-bottom input {
+  margin: 0;
+}
+main form button {
+  width: 40%;
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 10px;
+}
+main form button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
+
 /*# sourceMappingURL=style.css.map */

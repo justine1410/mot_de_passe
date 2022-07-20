@@ -133,6 +133,7 @@ button.addEventListener('click',(e)=>{
             return Math.floor(Math.random()*(max - min +1)) + min;
         }
         nombre = nombreAleatoire(nombreChiffre,10);
+        console.log(nombreChiffre);
     }else{
         console.log('pas de chiffres');
     }
