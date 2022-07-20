@@ -122,11 +122,17 @@ button.addEventListener('click',(e)=>{
     let majuscules = " ";
     let speciauxCaractere = " ";
 
+    let nombreChiffre = document.querySelector('.nombre-chiffre').value;
+    let nombreMinuscule = document.querySelector('.nombre-minuscule').value;
+    let nombreMajuscule = document.querySelector('.nombre-majuscule').value;
+    let nombreCaractere = document.querySelector('.nombre-caractere').value;
+
+
     if(chiffre.checked== true){
         function nombreAleatoire(min,max){
             return Math.floor(Math.random()*(max - min +1)) + min;
         }
-        nombre = nombreAleatoire(1,10);
+        nombre = nombreAleatoire(nombreChiffre,10);
     }else{
         console.log('pas de chiffres');
     }
@@ -143,8 +149,8 @@ button.addEventListener('click',(e)=>{
 
             return result;
         }
-
-        minuscules = minusculeAleatoire(1)
+        minuscules = minusculeAleatoire(nombreMinuscule)
+        console.log(minuscules);
     }else{
         console.log('pas de minuscules');
     }
@@ -162,7 +168,7 @@ button.addEventListener('click',(e)=>{
             return result;
         }
 
-        majuscules = majusculeAleatoire(1)
+        majuscules = majusculeAleatoire(nombreMajuscule)
     }else{
         console.log('pas de majuscule');
     }
@@ -180,7 +186,7 @@ button.addEventListener('click',(e)=>{
             return result;
         }
 
-        speciauxCaractere = speciauxAleatoire(1)
+        speciauxCaractere = speciauxAleatoire(nombreCaractere)
     }else{
         console.log('Pas de speciaux');
     }
