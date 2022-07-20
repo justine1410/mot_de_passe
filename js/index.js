@@ -117,13 +117,16 @@ let button = document.getElementById("bouton")
 
 button.addEventListener('click',(e)=>{
     e.preventDefault();
+    let nombre = " ";
+    let minuscules = " ";
+    let majuscules = " ";
+    let speciaux = " ";
+
     if(chiffre.checked== true){
         function nombreAleatoire(min,max){
             return Math.floor(Math.random()*(max - min +1)) + min;
         }
-        let nombre = nombreAleatoire(1,10);
-        localStorage.setItem('nombres', nombre)
-        console.log(nombre);
+        nombre = nombreAleatoire(1,10);
     }else{
         console.log('pas de chiffres');
     }
@@ -141,9 +144,7 @@ button.addEventListener('click',(e)=>{
             return result;
         }
 
-        let minuscules = minusculeAleatoire(1)
-        localStorage.setItem('minuscule', minuscules)
-        console.log(minuscules);
+        minuscules = minusculeAleatoire(1)
     }else{
         console.log('pas de minuscules');
     }
@@ -161,9 +162,7 @@ button.addEventListener('click',(e)=>{
             return result;
         }
 
-        let majuscules = majusculeAleatoire(1)
-        localStorage.setItem('majuscule', majuscules)
-        console.log(majuscules);
+        majuscules = majusculeAleatoire(1)
     }else{
         console.log('pas de majuscule');
     }
@@ -182,22 +181,13 @@ button.addEventListener('click',(e)=>{
         }
 
         let speciaux = speciauxAleatoire(1)
-        localStorage.setItem('speciaux', speciaux)
-        console.log(speciaux);
     }else{
         console.log('Pas de speciaux');
     }
     
-    console.log(localStorage);
-    let chiffres = localStorage.getItem('nombres');
-    let minuscules = localStorage.getItem('minuscule');
-    let majuscules = localStorage.getItem('majuscule');
-    let speciauxcaractere = localStorage.getItem('speciaux');
-
     let mdp= document.querySelector('.mdp')
 
-    mdp.innerHTML=mdp.innerHTML+`${chiffres+minuscules+majuscules+speciauxcaractere}`
-    localStorage.clear()
+    mdp.innerHTML=mdp.innerHTML+`${nombre+minuscules+majuscules+speciaux}`
 })
 
 
