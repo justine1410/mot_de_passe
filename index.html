@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/forgot-password-g8509b3d06_1280.png" type="image/x-icon">
+
+    <title>Générateur de mot de passe</title>
+</head>
+<body>
+    <header>
+        <img src="./img/forgot-password-g8509b3d06_1280.png" alt="">
+        <h1>Générateur de mot de passe</h1>
+    </header>
+    <main>
+        <form action="">
+            <h2>
+                Séléctionnez les options de votre mot de passe :
+            </h2>
+            <div class="choix">
+                <input type="checkbox" name="chiffre" id="chiffre">
+                <label for="chiffre" id="label-chiffre">Chiffres de 1 à 10</label>    
+            </div>
+    
+            <div class="choix">
+                <input type="checkbox" name="minuscule" id="minuscule">
+                <label for="minuscule" id="label-minuscule">Lettre en minuscule</label>    
+            </div>
+    
+            <div class="choix">
+                <input type="checkbox" name="majuscule" id="majuscule">
+                <label for="majuscule" id="lable-majuscule">Lettre en majuscule</label>    
+            </div>
+    
+            <div class="choix">
+                <input type="checkbox" name="speciaux" id="speciaux">
+                <label for="speciaux">Caractère spéciaux [ & ! @ $ - ( ) _ ]</label>    
+            </div>
+    
+            <div class="choix">
+                   <select name="nombre-caractere" id="nombre-caractere">
+                       <option value="1">1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5</option>
+                       <option value="6">6</option>
+                       <option value="7">7</option>
+                       <option value="8">8</option>
+                       <option value="9">9</option>
+                       <option value="10">10</option>
+                   </select>
+                   <label for="nombre-caractere">Nombre de caractère</label>
+            </div>
+    
+            <button id="bouton">
+                Créer votre mode de passe
+            </button>
+    
+        </form>
+        <div class="mdp">
+
+        </div>
+    </main>
+    
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
