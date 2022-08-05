@@ -5,7 +5,7 @@ header {
   align-items: center;
 }
 header img {
-  width: 10%;
+  margin-bottom: -50px;
 }
 
 main {
@@ -19,36 +19,86 @@ main form {
   align-items: center;
   margin-bottom: 30px;
 }
+main form h2 {
+  color: #991c8f;
+}
 main form .choix {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 255px;
+  width: 300px;
   margin: 20px;
+  font-size: 18px;
 }
-main form .choix input {
-  margin: 0;
+main form .choix .choix-top {
+  position: relative;
 }
-main form .choix input[type=checkbox] {
-  background-color: red;
+main form .choix [type=checkbox] {
+  position: absolute;
+  left: 0;
+  opacity: 0.01;
 }
-main form .choix .choix-top input:hover, main form .choix .choix-top label:hover {
+main form .choix [type=checkbox] + label {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.7;
   cursor: pointer;
 }
+main form .choix [type=checkbox]:not(:checked) + label::before,
+main form .choix [type=checkbox]:checked + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #aaa;
+  border-radius: 0.2em;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 rgba(203, 34, 237, 0.2);
+  transition: all 0.275s;
+}
+main form .choix [type=checkbox]:not(:checked) + label::after,
+main form .choix [type=checkbox]:checked + label::after {
+  content: "X";
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  font-size: 23px;
+  color: #991c8f;
+  line-height: 0;
+  transition: all 0.2s;
+}
+main form .choix [type=checkbox]:not(:checked) + label::after {
+  opacity: 0;
+  transform: scale(0);
+}
+main form .choix [type=checkbox]:checked + label::after {
+  opacity: 1;
+  transform: scale(1);
+}
 main form button {
-  width: 40%;
+  width: 30%;
   margin-top: 50px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
+  background-color: #991c8f;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  border: none;
 }
 main form button:hover {
   cursor: pointer;
-  transform: scale(1.1);
-  transition: 0.2s ease-in-out;
 }
 main .mdp {
   text-align: center;
   font-size: 30px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 750px) {
+  main form button {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

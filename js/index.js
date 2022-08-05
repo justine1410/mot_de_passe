@@ -129,12 +129,10 @@ button.addEventListener('click',(e)=>{
 
 
     if(chiffre.checked== true){
+
         const characters = '1234567890';
 
         function nombreAleatoire(length){
-        //     return Math.floor(Math.random()*(max - min +1)) + min;
-        // }
-        // nombre = nombreAleatoire(nombreChiffre,1,10);
         let result = ' ';
         const charactersLength = characters.length;
         for ( let i = 0; i < length; i++ ) {
@@ -153,7 +151,7 @@ button.addEventListener('click',(e)=>{
         const characters = 'abcdefghijklmnopqrstuvwxyz';
 
         function minusculeAleatoire(length){
-            let result = ' ';
+            let result = '';
             const charactersLength = characters.length;
             for ( let i = 0; i < length; i++ ) {
                 result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -162,7 +160,6 @@ button.addEventListener('click',(e)=>{
             return result;
         }
         minuscules = minusculeAleatoire(nombreMinuscule)
-        console.log(minuscules);
     }else{
         console.log('pas de minuscules');
     }
@@ -171,7 +168,7 @@ button.addEventListener('click',(e)=>{
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
         function majusculeAleatoire(length){
-            let result = ' ';
+            let result = '';
             const charactersLength = characters.length;
             for ( let i = 0; i < length; i++ ) {
                 result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -189,7 +186,7 @@ button.addEventListener('click',(e)=>{
         const characters = '&!@$-()_';
 
         function speciauxAleatoire(length){
-            let result = ' ';
+            let result = '';
             const charactersLength = characters.length;
             for ( let i = 0; i < length; i++ ) {
                 result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -204,9 +201,12 @@ button.addEventListener('click',(e)=>{
     }
     
     let mdp= document.querySelector('.mdp')
-
-    mdp.innerHTML=mdp.innerHTML+`<p>${nombre+minuscules+majuscules+speciauxCaractere}</p>`
+    let coucou = nombre+minuscules+majuscules+speciauxCaractere;
+    console.log(coucou);
+    console.table(nombre,minuscules,majuscules,speciauxCaractere);
+    mdp.innerHTML+=`<p>${nombre+minuscules+majuscules+speciauxCaractere}</p>`
 })
+
 
 
 
