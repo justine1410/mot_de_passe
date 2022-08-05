@@ -201,10 +201,17 @@ button.addEventListener('click',(e)=>{
     }
     
     let mdp= document.querySelector('.mdp')
-    let coucou = nombre+minuscules+majuscules+speciauxCaractere;
-    console.log(coucou);
+
+    let nouveauMDP = nombre+minuscules+majuscules+speciauxCaractere;
+
+    console.log(nouveauMDP);
+    
+    let shuffled = nouveauMDP.split('').sort(()=>{return 0.5-Math.random()}).join('');
+
+    console.log(shuffled);
+    
     console.table(nombre,minuscules,majuscules,speciauxCaractere);
-    mdp.innerHTML+=`<p>${nombre+minuscules+majuscules+speciauxCaractere}</p>`
+    mdp.innerHTML+=`<p>${shuffled}</p>`
 })
 
 
