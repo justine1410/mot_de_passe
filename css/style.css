@@ -13,6 +13,12 @@ main {
   flex-direction: column;
   justify-content: center;
 }
+main .error {
+  color: red;
+  display: none;
+  text-align: center;
+  font-size: 20px;
+}
 main form {
   display: flex;
   flex-direction: column;

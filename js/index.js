@@ -211,7 +211,15 @@ button.addEventListener('click',(e)=>{
     console.log(shuffled);
     
     console.table(nombre,minuscules,majuscules,speciauxCaractere);
-    mdp.innerHTML+=`<p>${shuffled}</p>`
+
+    if(!chiffre.checked && !minuscule.checked && !majuscule.checked && !speciaux.checked){
+        document.querySelector('.error').style.display="initial"
+
+    }else{
+        document.querySelector('.error').style.display="none"
+        mdp.innerHTML+=`<p>${shuffled}</p>`
+    }
+
 })
 
 
